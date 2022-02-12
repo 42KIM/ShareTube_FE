@@ -7,7 +7,7 @@ const TestPage = () => {
       <Text size={'01px'} color={'red'} bold>
         hello world
       </Text>
-      <Button size='lg' color='white' boxShadow>
+      <Button size='lg' color='red' floatPosition={80} boxShadow>
         click me
       </Button>
     </>

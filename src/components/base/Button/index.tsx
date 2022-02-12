@@ -6,10 +6,16 @@ const Button = ({
   children,
   size,
   color,
+  floatPosition,
   boxShadow
 }: ButtonProps): ReactElement => {
   return (
-    <StyledButton size={size} color={color} boxShadow={boxShadow}>
+    <StyledButton
+      size={size}
+      color={color}
+      floatPosition={floatPosition}
+      boxShadow={boxShadow}
+    >
       {children}
     </StyledButton>
   );

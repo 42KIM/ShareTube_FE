@@ -5,6 +5,7 @@ interface ButtonProps {
   children: ReactChild;
   size: IButtonSize;
   color: IButtonColor;
+  floatPosition?: number;
   boxShadow?: boolean;
 }
 

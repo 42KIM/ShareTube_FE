@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css, FlattenSimpleInterpolation } from 'styled-components';
 import { BUTTON_SIZE } from '../../../constants';
 import type { ButtonProps } from './types';
 
@@ -11,6 +11,16 @@ const StyledButton = styled.button<ButtonProps>`
   border: none;
   box-shadow: ${({ boxShadow }): string =>
     boxShadow ? '0px 1px 1px rgba(0, 0, 0, 0.25)' : 'none'};
+
+  ${({ floatPosition }): 0 | undefined | FlattenSimpleInterpolation =>
+    floatPosition &&
+    css`
+      position: fixed;
+      top: ${floatPosition}%;
+      right: 0;
+      left: 0;
+      margin: auto;
+    `}
 
   &:hover {
     filter: brightness(1.2);

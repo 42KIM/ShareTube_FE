@@ -9,9 +9,11 @@ const StyledButton = styled.button<ButtonProps>`
   cursor: pointer;
   background-color: ${({ color }): string => color};
   border: none;
-  box-shadow: ${({ boxShadow }): string =>
-    boxShadow ? '0px 1px 1px rgba(0, 0, 0, 0.25)' : 'none'};
-
+  ${({ boxShadow }): false | undefined | FlattenSimpleInterpolation =>
+    boxShadow &&
+    css`
+      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+    `}
   ${({ floatPosition }): 0 | undefined | FlattenSimpleInterpolation =>
     floatPosition &&
     css`

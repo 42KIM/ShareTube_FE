@@ -3,27 +3,15 @@ import SubMenu from './SubMenu';
 import { StyledContainer } from './styles';
 import type { DropdownProps } from './types';
 
-const Dropdown = ({
-  children,
-  size,
-  color,
-  content
-}: DropdownProps): ReactElement => {
+const Dropdown = ({ children, size }: DropdownProps): ReactElement => {
   const [display, setDisplay] = useState(false);
 
-  const handleClick = (e: React.MouseEvent<HTMLDivElement>): void => {
-    e.target === e.currentTarget && setDisplay(!display);
-  };
+  const handleClick = (): void => setDisplay(!display);
 
   return (
     <StyledContainer size={size} onClick={handleClick}>
-      {children}
-      <SubMenu
-        size={size}
-        color={color}
-        content={content}
-        isDisplaying={display}
-      />
+      {children[0]}
+      <SubMenu isDisplaying={display}>{children[1]}</SubMenu>
     </StyledContainer>
   );
 };

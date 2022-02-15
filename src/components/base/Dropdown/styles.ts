@@ -1,32 +1,30 @@
 import styled from 'styled-components';
 import { DROPDOWN_SIZE } from '../../../constants';
-import type { SubMenuProps } from './types';
+import type { DropdownProps, SubMenuProps } from './types';
 
-const StyledSubContainer = styled.div<Pick<SubMenuProps, 'size'>>`
+const StyledSubMenu = styled.div<SubMenuProps>`
   position: absolute;
-  top: calc(${({ size }) => DROPDOWN_SIZE[size].height} * 1.2);
+  top: 110%;
+  display: ${({ isDisplaying }) => (isDisplaying ? 'flex' : 'none')};
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.2);
 `;
 
-const StyledContainer = styled.div<Pick<SubMenuProps, 'size'>>`
+const StyledContainer = styled.div<DropdownProps>`
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: ${({ size }): string => DROPDOWN_SIZE[size].width};
   height: ${({ size }): string => DROPDOWN_SIZE[size].height};
   text-align: center;
   cursor: pointer;
-  /* temp */
-  border: 1px solid black;
+  user-select: none;
 `;
 
-const StyledLi = styled.li<Omit<SubMenuProps, 'content'>>`
-  display: ${({ isDisplaying }) => (isDisplaying ? 'block' : 'none')};
-  width: ${({ size }): string => DROPDOWN_SIZE[size].width};
-  height: ${({ size }): string => DROPDOWN_SIZE[size].height};
-  list-style: none;
-  background-color: ${({ color }): string => color};
-
-  &:hover {
-    filter: brightness(1.2);
-  }
-`;
-
-export { StyledContainer, StyledSubContainer, StyledLi };
+export { StyledContainer, StyledSubMenu };

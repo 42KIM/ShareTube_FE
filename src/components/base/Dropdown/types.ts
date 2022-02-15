@@ -1,19 +1,13 @@
 import { ReactChild } from 'react';
-import type { IColor, IDropdownSize } from '../../../types';
+import type { IDropdownSize } from '../../../types';
 
-interface DropdownProps extends Omit<SubMenuProps, 'isDisplaying'> {
-  children: ReactChild;
-}
-
-interface IContent {
-  link: string;
-  text: string;
+interface DropdownProps {
+  children: [ReactChild, ReactChild];
+  size: IDropdownSize;
 }
 
 interface SubMenuProps {
-  size: IDropdownSize;
-  color: IColor;
-  content: IContent[];
+  children: ReactChild;
   isDisplaying: boolean;
 }
 

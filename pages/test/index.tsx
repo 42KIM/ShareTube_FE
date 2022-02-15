@@ -2,6 +2,21 @@ import Text from '../../src/components/base/Text';
 import Image from '../../src/components/base/Image';
 
 const TestPage = () => {
+  const dropContent = [
+    {
+      link: '/drop1',
+      text: 'menu1'
+    },
+    {
+      link: '/drop2',
+      text: 'menu2'
+    },
+    {
+      link: '/drop3',
+      text: 'menu3'
+    }
+  ];
+
   return (
     <>
       Text 컴포넌트

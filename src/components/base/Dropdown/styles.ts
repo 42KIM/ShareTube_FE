@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import { DROPDOWN_SIZE } from '../../../constants';
 import type { DropdownProps, SubMenuProps } from './types';
+import { DROPDOWN_SIZE } from '@/constants';
 
 const StyledSubMenu = styled.div<SubMenuProps>`
   position: absolute;

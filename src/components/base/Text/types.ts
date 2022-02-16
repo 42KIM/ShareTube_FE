@@ -1,4 +1,4 @@
-import type { ITextSize } from '../../../types/index';
+import type { ITextSize } from '@/types';
 
 interface TextProps {
   children: string | number;

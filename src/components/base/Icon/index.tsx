@@ -1,6 +1,6 @@
 import { ReactElement } from 'react';
 import type { IconProps } from './types';
-import { ICONS } from '../../../constants/icon';
+import { ICONS } from '@/constants';
 
 const Icon = ({ icon, size, color }: IconProps): ReactElement => {
   return (

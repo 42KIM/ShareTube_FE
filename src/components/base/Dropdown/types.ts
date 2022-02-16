@@ -1,5 +1,5 @@
 import { ReactChild } from 'react';
-import type { IDropdownSize } from '../../../types';
+import type { IDropdownSize } from '@/types';
 
 interface DropdownProps {
   children: [ReactChild, ReactChild];

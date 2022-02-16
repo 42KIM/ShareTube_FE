@@ -1,6 +1,6 @@
 import styled, { css, FlattenSimpleInterpolation } from 'styled-components';
-import { BUTTON_SIZE } from '../../../constants';
 import type { ButtonProps } from './types';
+import { BUTTON_SIZE } from '@/constants';
 
 const StyledButton = styled.button<ButtonProps>`
   width: ${({ size }): string => BUTTON_SIZE[size].width};

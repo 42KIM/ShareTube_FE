@@ -1,6 +1,4 @@
-import Text from '../../src/components/base/Text';
-import Image from '../../src/components/base/Image';
-import Icon from '../../src/components/base/Icon';
+import { Text, Image, Icon } from '@/base';
 
 const TestPage = () => {
   const dropContent = [

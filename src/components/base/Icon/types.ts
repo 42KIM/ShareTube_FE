@@ -1,4 +1,4 @@
-import { IColor, IIconNames, IIconSize } from '../../../types';
+import { IColor, IIconNames, IIconSize } from '@/types';
 
 interface IconProps {
   icon: IIconNames;

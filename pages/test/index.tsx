@@ -1,5 +1,6 @@
 import Text from '../../src/components/base/Text';
 import Image from '../../src/components/base/Image';
+import Icon from '../../src/components/base/Icon';
 
 const TestPage = () => {
   const dropContent = [
@@ -35,6 +36,8 @@ const TestPage = () => {
         height={200}
         round
       />
+      Icon 컴포넌트
+      <Icon icon='share' size={20} color='gray' />
     </>
   );
 };

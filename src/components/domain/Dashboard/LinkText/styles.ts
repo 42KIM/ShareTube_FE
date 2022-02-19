@@ -1,8 +1,8 @@
 import styled from 'styled-components';
-import { Text } from '@/base';
 
+// temp
 const StyledLinkText = styled.div`
-  background-color: yellow;
+  width: 100%;
 `;
 
 const StyledA = styled.a`

@@ -1,7 +1,8 @@
+import type { ITextSize, IColor } from '@/types';
+
 interface InfoTextProps {
-  isLoggedIn: boolean;
-  name?: string;
-  percentile?: number;
+  textSize: ITextSize;
+  highlightColor: IColor;
 }
 
 export type { InfoTextProps };

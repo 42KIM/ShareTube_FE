@@ -1,4 +1,5 @@
 import { Text, Image, Icon } from '@/base';
+import { Dashboard } from '@/domain';
 
 const TestPage = () => {
   const dropContent = [
@@ -34,8 +35,20 @@ const TestPage = () => {
         height={200}
         round
       />
+      <br />
       Icon 컴포넌트
+      <br />
       <Icon icon='share' size={20} color='gray' />
+      <br />
+      Dashboard
+      <br />
+      <Dashboard.Container>
+        <Dashboard.InfoText textSize={'02px'} />
+        <Dashboard.InfoBoard titleSize={'02px'} contentSize={'02px'} />
+        <Dashboard.LinkText url={'/login'} textSize={'02px'}>
+          마이리스트 보러가기
+        </Dashboard.LinkText>
+      </Dashboard.Container>
     </>
   );
 };

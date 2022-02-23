@@ -5,7 +5,7 @@ interface LinkTextProps {
   children: ReactChild;
   url: IPageUrl;
   textSize: ITextSize;
-  textColor: IColor;
+  textColor?: IColor;
 }
 
 export type { LinkTextProps };

@@ -1,5 +1,5 @@
 import { Text, Image, Icon } from '@/base';
-import { Dashboard } from '@/domain';
+import { Dashboard, GreetingBox } from '@/domain';
 
 const TestPage = () => {
   const dropContent = [
@@ -49,6 +49,14 @@ const TestPage = () => {
           마이리스트 보러가기
         </Dashboard.LinkText>
       </Dashboard.Container>
+      <br />
+      Greeting Box!
+      <br />
+      <GreetingBox
+        textContents={['어서오세요', '오늘은 어떤 리스트를 공유해볼까요?']}
+        textSizes={['02px', '02px']}
+        isBold={[true, false]}
+      />
     </>
   );
 };

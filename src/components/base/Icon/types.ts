@@ -3,7 +3,7 @@ import { IColor, IIconNames, IIconSize } from '@/types';
 interface IconProps {
   icon: IIconNames;
   size: IIconSize;
-  color: IColor;
+  color?: IColor;
 }
 
 export type { IconProps };

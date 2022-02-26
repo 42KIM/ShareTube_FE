@@ -1,7 +1,5 @@
 import styled from 'styled-components';
 
-// box-sizing -> global
-// button cursor pointer -> global
 const StyledContainer = styled.div`
   position: relative;
   box-sizing: border-box;

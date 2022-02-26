@@ -1,4 +1,5 @@
 import { Text, Image, Icon } from '@/base';
+import { COLOR, FONT, ICONS } from '@/constants';
 import { Dashboard, GreetingBox, Header } from '@/domain';
 
 const TestPage = () => {
@@ -21,7 +22,7 @@ const TestPage = () => {
     <>
       Text 컴포넌트
       <br />
-      <Text size={'01px'} color={'red'} bold>
+      <Text font={FONT.h1_bold} color={COLOR.black}>
         hello world
       </Text>
       <br />
@@ -38,14 +39,14 @@ const TestPage = () => {
       <br />
       Icon 컴포넌트
       <br />
-      <Icon icon='share' size={20} color='gray' />
+      <Icon icon={'heart'} size={20} color={COLOR.red} />
       <br />
       Dashboard
       <br />
       <Dashboard.Container>
-        <Dashboard.InfoText textSize={'02px'} />
-        <Dashboard.InfoBoard titleSize={'02px'} contentSize={'02px'} />
-        <Dashboard.LinkText url={'/login'} textSize={'02px'}>
+        <Dashboard.InfoText textFont={FONT.title} />
+        <Dashboard.InfoBoard titleFont={FONT.title} contentFont={FONT.title} />
+        <Dashboard.LinkText url={'/login'} textFont={FONT.h4_bold}>
           마이리스트 보러가기
         </Dashboard.LinkText>
       </Dashboard.Container>
@@ -54,7 +55,7 @@ const TestPage = () => {
       <br />
       <GreetingBox
         textContents={['어서오세요', '오늘은 어떤 리스트를 공유해볼까요?']}
-        textSizes={['02px', '02px']}
+        textFonts={[FONT.h1_bold, FONT.h2]}
         isBold={[true, false]}
       />
       <br />

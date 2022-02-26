@@ -10,9 +10,9 @@ const Icon = ({ icon, size, color }: IconProps): ReactElement => {
       xmlns={'http://www.w3.org/2000/svg'}
       fillRule={'evenodd'}
       clipRule={'evenodd'}
-      viewBox={ICONS[icon].viewBox}
+      viewBox={ICONS[icon]?.viewBox}
     >
-      <path d={ICONS[icon].path} />
+      <path d={ICONS[icon]?.path} />
     </svg>
   );
 };

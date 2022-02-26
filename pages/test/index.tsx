@@ -1,5 +1,5 @@
 import { Text, Image, Icon } from '@/base';
-import { Dashboard, GreetingBox } from '@/domain';
+import { Dashboard, GreetingBox, Header } from '@/domain';
 
 const TestPage = () => {
   const dropContent = [
@@ -57,6 +57,10 @@ const TestPage = () => {
         textSizes={['02px', '02px']}
         isBold={[true, false]}
       />
+      <br />
+      Header!!
+      <br />
+      <Header />
     </>
   );
 };

@@ -28,6 +28,7 @@ const StyledButton = styled.button`
   width: 77px;
   height: 40px;
   font-weight: bold;
+  cursor: pointer;
   background-color: transparent;
   border: 0;
   outline: 0;

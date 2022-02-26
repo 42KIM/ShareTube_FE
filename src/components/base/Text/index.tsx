@@ -4,13 +4,13 @@ import type { TextProps } from './types';
 
 const Text = ({
   children,
-  size,
+  font,
   color,
   bold,
   block
 }: TextProps): ReactElement => {
   return (
-    <StyledText size={size} color={color} bold={bold} block={block}>
+    <StyledText font={font} color={color} bold={bold} block={block}>
       {children}
     </StyledText>
   );

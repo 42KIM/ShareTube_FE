@@ -1,6 +1,6 @@
-import { TEXT_SIZE } from '@/constants';
+import { FONT } from '@/constants';
 
-type TextSizeKeys = keyof typeof TEXT_SIZE;
-type ITextSize = typeof TEXT_SIZE[TextSizeKeys];
+type FontTypes = keyof typeof FONT;
+type IFont = typeof FONT[FontTypes];
 
-export type { ITextSize };
+export type { IFont };

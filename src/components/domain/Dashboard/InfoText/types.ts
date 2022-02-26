@@ -1,7 +1,7 @@
-import type { ITextSize, IColor } from '@/types';
+import type { IFont, IColor } from '@/types';
 
 interface InfoTextProps {
-  textSize: ITextSize;
+  textFont: IFont;
   highlightColor?: IColor;
 }
 

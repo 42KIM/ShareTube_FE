@@ -6,8 +6,8 @@ import { Text } from '@/base';
 const InfoBoardItem = ({
   titleText,
   infoContent,
-  titleSize,
-  contentSize,
+  titleFont,
+  contentFont,
   contentColor
 }: InfoBoardItemProps): ReactElement => {
   // from store
@@ -15,8 +15,8 @@ const InfoBoardItem = ({
 
   return (
     <StyledInfo>
-      <Text size={titleSize}>{titleText}</Text>
-      <Text size={contentSize} color={contentColor} bold>
+      <Text font={titleFont}>{titleText}</Text>
+      <Text font={contentFont} color={contentColor} bold>
         {isLoggedIn ? infoContent : '-'}
       </Text>
     </StyledInfo>

@@ -4,8 +4,8 @@ import type { InfoBoardProps } from './types';
 import InfoBoardItem from './InfoBoardItem';
 
 const InfoBoard = ({
-  titleSize,
-  contentSize,
+  titleFont,
+  contentFont,
   contentColor
 }: InfoBoardProps): ReactElement => {
   // from store
@@ -18,22 +18,22 @@ const InfoBoard = ({
       <InfoBoardItem
         titleText={'구독 중인 채널'}
         infoContent={subscriptions}
-        titleSize={titleSize}
-        contentSize={contentSize}
+        titleFont={titleFont}
+        contentFont={contentFont}
         contentColor={contentColor}
       />
       <InfoBoardItem
         titleText={'내가 공유한 리스트'}
         infoContent={sharedLists}
-        titleSize={titleSize}
-        contentSize={contentSize}
+        titleFont={titleFont}
+        contentFont={contentFont}
         contentColor={contentColor}
       />
       <InfoBoardItem
         titleText={'내 리스트 총 조회수'}
         infoContent={totalViews}
-        titleSize={titleSize}
-        contentSize={contentSize}
+        titleFont={titleFont}
+        contentFont={contentFont}
         contentColor={contentColor}
       />
     </StyledContainer>

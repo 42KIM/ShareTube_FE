@@ -6,7 +6,6 @@ const StyledButton = styled.button<ButtonProps>`
   width: ${({ size }): string => BUTTON_SIZE[size].width};
   height: ${({ size }): string => BUTTON_SIZE[size].height};
   padding: 0;
-  cursor: pointer;
   background-color: ${({ color }): string => color};
   border: none;
   ${({ boxShadow }): false | undefined | FlattenSimpleInterpolation =>

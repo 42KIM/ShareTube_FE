@@ -1,16 +1,16 @@
-import { IColor, ITextSize } from '@/types';
+import { IColor, IFont } from '@/types';
 
 interface InfoBoardProps {
-  titleSize: ITextSize;
-  contentSize: ITextSize;
+  titleFont: IFont;
+  contentFont: IFont;
   contentColor?: IColor;
 }
 
 interface InfoBoardItemProps {
   titleText: string;
   infoContent: string | number;
-  titleSize: ITextSize;
-  contentSize: ITextSize;
+  titleFont: IFont;
+  contentFont: IFont;
   contentColor?: IColor;
 }
 

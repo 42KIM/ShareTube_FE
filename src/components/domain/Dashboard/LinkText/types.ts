@@ -1,10 +1,10 @@
 import { ReactChild } from 'react';
-import type { IColor, IPageUrl, ITextSize } from '@/types';
+import type { IColor, IPageUrl, IFont } from '@/types';
 
 interface LinkTextProps {
   children: ReactChild;
   url: IPageUrl;
-  textSize: ITextSize;
+  textFont: IFont;
   textColor?: IColor;
 }
 

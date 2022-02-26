@@ -1,10 +1,10 @@
 import { ReactChild } from 'react';
-import { IButtonSize, IButtonColor } from '@/types';
+import { IButtonSize, IColor } from '@/types';
 
 interface ButtonProps {
   children: ReactChild;
   size: IButtonSize;
-  color: IButtonColor;
+  color: IColor;
   floatPosition?: number;
   boxShadow?: boolean;
 }

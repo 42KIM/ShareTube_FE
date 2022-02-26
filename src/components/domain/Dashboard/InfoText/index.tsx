@@ -3,7 +3,7 @@ import { Text } from '@/base';
 import type { InfoTextProps } from './types';
 
 const InfoText = ({
-  textSize,
+  textFont,
   highlightColor
 }: InfoTextProps): ReactElement => {
   // from store
@@ -13,17 +13,17 @@ const InfoText = ({
 
   return isLoggedIn ? (
     <div>
-      <Text size={textSize} bold>
+      <Text font={textFont} bold>
         {name}
       </Text>
-      <Text size={textSize}>{'님은 구독 채널 수 '}</Text>
-      <Text size={textSize} color={highlightColor} bold>
+      <Text font={textFont}>{'님은 구독 채널 수 '}</Text>
+      <Text font={textFont} color={highlightColor} bold>
         {percentile + '%'}
       </Text>
-      <Text size={textSize}>{'입니다.'}</Text>
+      <Text font={textFont}>{'입니다.'}</Text>
     </div>
   ) : (
-    <Text size={textSize} bold>
+    <Text font={textFont} bold>
       {'구독자의 랭킹이 궁금하다면 로그인 해주세요!'}
     </Text>
   );

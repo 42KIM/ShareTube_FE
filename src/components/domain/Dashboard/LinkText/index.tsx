@@ -7,14 +7,14 @@ import { LinkTextProps } from './types';
 const LinkText = ({
   children,
   url,
-  textSize,
+  textFont,
   textColor
 }: LinkTextProps): ReactElement => {
   return (
     <StyledLinkText>
       <Link href={url}>
         <StyledA>
-          <Text size={textSize} color={textColor} bold>
+          <Text font={textFont} color={textColor} bold>
             {children}
           </Text>
         </StyledA>

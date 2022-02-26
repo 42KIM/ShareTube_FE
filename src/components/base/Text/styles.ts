@@ -3,8 +3,7 @@ import { TextProps } from './types';
 
 const StyledText = styled.span<TextProps>`
   display: ${({ block }): string => (block ? 'block' : 'inline')};
-  font-size: ${({ size }): string => size};
-  font-weight: ${({ bold }): string => (bold ? 'bold' : 'normal')};
+  font: ${({ font }): string => font};
   color: ${({ color }): string => (color ? color : 'black')};
 `;
 

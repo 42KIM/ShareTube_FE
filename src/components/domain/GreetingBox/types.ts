@@ -1,8 +1,8 @@
-import { ITextSize } from '@/types';
+import { IFont } from '@/types';
 
 interface GreetingBoxProps {
   textContents: string[];
-  textSizes: ITextSize[];
+  textFonts: IFont[];
   isBold: boolean[];
 }
 

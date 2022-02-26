@@ -5,13 +5,13 @@ import { Text } from '@/base';
 
 const GreetingBox = ({
   textContents,
-  textSizes,
+  textFonts,
   isBold
 }: GreetingBoxProps): ReactElement => {
   return (
     <StyledContainer>
       {textContents.map((content, index) => (
-        <Text size={textSizes[index]} bold={isBold[index]} block>
+        <Text font={textFonts[index]} bold={isBold[index]} block>
           {content}
         </Text>
       ))}

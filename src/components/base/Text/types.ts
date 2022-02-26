@@ -1,9 +1,9 @@
-import type { IColor, ITextSize } from '@/types';
+import type { IColor, IFont } from '@/types';
 import { ReactChild } from 'react';
 
 interface TextProps {
   children?: ReactChild;
-  size: ITextSize;
+  size: IFont;
   color?: IColor;
   bold?: boolean;
   italic?: boolean;

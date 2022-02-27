@@ -1,6 +1,6 @@
 import { Text, Image, Icon } from '@/base';
 import { COLOR, FONT, ICONS } from '@/constants';
-import { Dashboard, GreetingBox, Header } from '@/domain';
+import { ChannelCard, Dashboard, GreetingBox, Header } from '@/domain';
 
 const TestPage = () => {
   const dropContent = [
@@ -34,7 +34,7 @@ const TestPage = () => {
         }
         width={200}
         height={200}
-        round
+        borderRadius={30}
       />
       <br />
       Icon 컴포넌트
@@ -62,6 +62,19 @@ const TestPage = () => {
       Header!!
       <br />
       <Header />
+      <br />
+      채널 카드
+      <br />
+      <ChannelCard
+        channelUrl={'http://www.youtube.com'}
+        direction={'vertical'}
+        size={'200px'}
+        thumbnail={
+          'https://yt3.ggpht.com/ytc/AKedOLTi6w4E6985-QdVBbovBSsnCeTETyj0WomjM5IY8Q=s900-c-k-c0x00ffffff-no-rj'
+        }
+        title={'침착맨가다나나아다다앙아다아아다아아'}
+        subTitle={'12.5'}
+      />
     </>
   );
 };

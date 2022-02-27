@@ -191,7 +191,7 @@ table {
   border-spacing: 0;
   border-collapse: collapse;
 }
-body {
+* {
   box-sizing: border-box;
   letter-spacing: -0.05em;
 }

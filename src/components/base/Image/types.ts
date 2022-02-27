@@ -2,7 +2,7 @@ interface ImageProps {
   src: string;
   width: number | string;
   height: number | string;
-  round?: boolean;
+  borderRadius?: number | string;
 }
 
 export type { ImageProps };

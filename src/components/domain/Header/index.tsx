@@ -26,7 +26,7 @@ const Header = (): ReactElement => {
       <Link href={'#'}>
         <a>
           <StyledLogo>
-            <Icon icon={'bookmark'} size={ICON_SIZE.lg} />
+            <Icon icon={'star'} size={ICON_SIZE.lg} />
           </StyledLogo>
         </a>
       </Link>

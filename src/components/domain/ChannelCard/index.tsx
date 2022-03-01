@@ -28,7 +28,9 @@ const ChannelCard = ({
         <StyledTextWrapper>
           <Text font={FONT.title}>{title}</Text>
         </StyledTextWrapper>
-        <Text font={FONT.subTitle}>{`${subTitle}명`}</Text>
+        <Text font={FONT.subTitle}>
+          {subTitle !== undefined ? `${subTitle}명` : ''}
+        </Text>
       </StyledTextContainer>
     </StyledContainer>
   );

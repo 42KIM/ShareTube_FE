@@ -1,7 +1,7 @@
 import { ReactElement } from 'react';
 import Link from 'next/link';
 import { Text } from '@/base';
-import { StyledLinkText, StyledA } from './styles';
+import { StyledLinkText } from './styles';
 import { LinkTextProps } from './types';
 
 const LinkText = ({
@@ -13,11 +13,11 @@ const LinkText = ({
   return (
     <StyledLinkText>
       <Link href={url}>
-        <StyledA>
+        <a>
           <Text font={textFont} color={textColor} bold>
             {children}
           </Text>
-        </StyledA>
+        </a>
       </Link>
     </StyledLinkText>
   );

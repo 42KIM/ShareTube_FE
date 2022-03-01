@@ -3,7 +3,7 @@ import { ReactChild } from 'react';
 
 interface TextProps {
   children?: ReactChild;
-  size: IFont;
+  font: IFont;
   color?: IColor;
   bold?: boolean;
   italic?: boolean;

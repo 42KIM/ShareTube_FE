@@ -10,7 +10,7 @@ import { FONT } from '@/constants';
 import { openInNewTab } from '@/utils';
 
 const ChannelCard = ({
-  channelUrl,
+  url,
   direction,
   size,
   thumbnail,
@@ -21,7 +21,7 @@ const ChannelCard = ({
     <StyledContainer
       direction={direction}
       size={size}
-      onClick={() => openInNewTab(channelUrl)}
+      onClick={() => openInNewTab(url)}
     >
       <Image src={thumbnail} width={size} height={size} borderRadius={10} />
       <StyledTextContainer direction={direction} size={size}>

@@ -1,12 +1,12 @@
 import type { ICard } from '@/types';
 
 interface ChannelCardProps {
-  channelUrl: string;
+  url?: string;
   direction?: 'vertical' | 'parallel';
   size: ICard;
-  thumbnail: string;
-  title: string;
-  subTitle: string;
+  thumbnail?: string;
+  title?: string;
+  subTitle?: string;
 }
 
 export type { ChannelCardProps };

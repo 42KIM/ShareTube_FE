@@ -10,7 +10,7 @@ import { FONT } from '@/constants';
 import { openInNewTab } from '@/utils';
 
 const ChannelCard = ({
-  channelUrl,
+  url,
   direction,
   size,
   thumbnail,
@@ -21,14 +21,16 @@ const ChannelCard = ({
     <StyledContainer
       direction={direction}
       size={size}
-      onClick={() => openInNewTab(channelUrl)}
+      onClick={() => openInNewTab(url)}
     >
       <Image src={thumbnail} width={size} height={size} borderRadius={10} />
       <StyledTextContainer direction={direction} size={size}>
         <StyledTextWrapper>
           <Text font={FONT.title}>{title}</Text>
         </StyledTextWrapper>
-        <Text font={FONT.subTitle}>{`${subTitle}명`}</Text>
+        <Text font={FONT.subTitle}>
+          {subTitle !== undefined ? `${subTitle}명` : ''}
+        </Text>
       </StyledTextContainer>
     </StyledContainer>
   );

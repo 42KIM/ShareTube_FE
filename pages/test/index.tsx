@@ -1,6 +1,12 @@
 import { Text, Image, Icon } from '@/base';
 import { COLOR, FONT, ICONS } from '@/constants';
-import { ChannelCard, Dashboard, GreetingBox, Header } from '@/domain';
+import {
+  Carousel,
+  ChannelCard,
+  Dashboard,
+  GreetingBox,
+  Header
+} from '@/domain';
 
 const TestPage = () => {
   const dropContent = [
@@ -75,6 +81,10 @@ const TestPage = () => {
         title={'침착맨가다나나아다다앙아다아아다아아'}
         subTitle={'12.5'}
       />
+      <br />
+      캐러셀 슬라이드
+      <br />
+      <Carousel />
     </>
   );
 };

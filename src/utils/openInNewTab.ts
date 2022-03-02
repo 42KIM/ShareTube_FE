@@ -1,2 +1,2 @@
-export const openInNewTab = (url: string | undefined): Window | null =>
-  window.open(url);
+export const openInNewTab = (url: string | undefined): Window | null | false =>
+  url !== undefined && window.open(url);

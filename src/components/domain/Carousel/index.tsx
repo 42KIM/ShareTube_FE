@@ -41,10 +41,9 @@ const Carousel = (): ReactElement => {
       if (
         wheelRef.current.scrollLeft + event.deltaY < 0 ||
         wheelRef.current.scrollLeft + event.deltaY >
-          wheelRef.current.offsetWidth
+          wheelRef.current.scrollWidth - wheelRef.current.offsetWidth
       )
         return;
-
       wheelRef.current.scrollLeft += event.deltaY;
     }
   };

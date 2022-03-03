@@ -7,7 +7,8 @@ const FONT = {
   h4_bold: '21px Pretendard-Bold',
   contents: '18px Pretendard-Regular',
   title: '18px Pretendard-SemiBold',
-  subTitle: '14px Pretendard-Medium'
+  subTitle: '14px Pretendard-Medium',
+  info_giant: '60px Pretendard-Black'
 } as const;
 
 export { FONT };

@@ -56,9 +56,19 @@ const Carousel = (): ReactElement => {
   return (
     <StyledContainer>
       {isLoggedIn ? (
-        <Text font={FONT.h3_bolder}>{`${username}님이 구독 중인 채널 >`}</Text>
+        <Link href={'/list'}>
+          <a>
+            <Text
+              font={FONT.h3_bolder}
+            >{`${username}님이 구독 중인 채널 >`}</Text>
+          </a>
+        </Link>
       ) : (
-        <Text font={FONT.h3_bolder}>{'구독 중인 채널 목록 >'}</Text>
+        <Link href={'/login'}>
+          <a>
+            <Text font={FONT.h3_bolder}>{'구독 중인 채널 목록 >'}</Text>
+          </a>
+        </Link>
       )}
       <StyledCardContainer ref={wheelRef}>
         {Children.toArray(

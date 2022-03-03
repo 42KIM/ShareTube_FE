@@ -72,7 +72,7 @@ const TestPage = () => {
       채널 카드
       <br />
       <ChannelCard
-        channelUrl={'http://www.youtube.com'}
+        url={'http://www.youtube.com'}
         direction={'vertical'}
         size={'200px'}
         thumbnail={
@@ -85,6 +85,10 @@ const TestPage = () => {
       캐러셀 슬라이드
       <br />
       <Carousel />
+      <br />
+      로그인 버튼
+      <br />
+      <Image src={'/images/googleLogin.png'} width={'190px'} height={'45px'} />
     </>
   );
 };

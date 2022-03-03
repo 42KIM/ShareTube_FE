@@ -23,7 +23,7 @@ const InfoText = ({
           <Text font={textFont} color={highlightColor} bold>
             {percentile + '%'}
           </Text>
-          <Text font={textFont}>{'입니다.'}</Text>
+          <Text font={textFont}>{'입니다! 🤭'}</Text>
         </>
       ) : (
         <Text font={textFont} bold>

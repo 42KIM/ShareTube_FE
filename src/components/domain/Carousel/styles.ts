@@ -3,6 +3,7 @@ import styled from 'styled-components';
 const StyledContainer = styled.div`
   display: flex;
   flex-direction: column;
+  gap: 10px;
 `;
 
 // snap not working?

@@ -1,4 +1,4 @@
-import { Text, Image, Icon } from '@/base';
+import { Text, Image, Icon, TextButton } from '@/base';
 import { COLOR, FONT, ICONS } from '@/constants';
 import {
   Carousel,
@@ -89,6 +89,12 @@ const TestPage = () => {
       로그인 버튼
       <br />
       <Image src={'/images/googleLogin.png'} width={'190px'} height={'45px'} />
+      <br />
+      텍스트 버튼
+      <br />
+      <TextButton font={'18px Pretendard-SemiBold'} width={'150px'}>
+        눌러주세요
+      </TextButton>
     </>
   );
 };

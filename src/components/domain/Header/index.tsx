@@ -7,19 +7,14 @@ import {
   StyledButtonWrapper,
   StyledLogoutButton
 } from './styles';
-import { Icon, Image } from '@/base';
-import { ICON_SIZE } from '@/constants';
+import { Icon } from '@/base';
+import { BASE_URL, ICON_SIZE } from '@/constants';
 import Link from 'next/link';
 
 // temp urls
 const Header = (): ReactElement => {
   // from store
   let isLoggedIn = false;
-
-  const handleLogIn = async () => {
-    let res = await fetch('https://sharetube-be.herokuapp.com/auth/login');
-    console.log(res);
-  };
 
   // onclick logout fn
   const logOut = () => {
@@ -49,7 +44,11 @@ const Header = (): ReactElement => {
           </StyledLogoutButton>
         ) : (
           <StyledButtonWrapper>
-            <StyledGoogleButton onClick={handleLogIn} />
+            <Link href={`${BASE_URL}/auth/login`}>
+              <a>
+                <StyledGoogleButton />
+              </a>
+            </Link>
           </StyledButtonWrapper>
         )}
       </StyledContainer>

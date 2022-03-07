@@ -1,5 +1,5 @@
 interface ImageProps {
-  src?: string;
+  src: string;
   width: number | string;
   height: number | string;
   borderRadius?: number | string;

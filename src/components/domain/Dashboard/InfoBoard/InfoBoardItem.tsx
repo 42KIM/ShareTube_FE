@@ -1,25 +1,31 @@
 import { ReactElement } from 'react';
-import { StyledInfo } from './styles';
+import { StyledInfoContainer } from './styles';
 import type { InfoBoardItemProps } from './types';
 import { Text } from '@/base';
+import Link from 'next/link';
 
 const InfoBoardItem = ({
   titleText,
+  linkUrl,
   infoContent,
   titleFont,
   contentFont,
   contentColor
 }: InfoBoardItemProps): ReactElement => {
   // from store
-  let isLoggedIn = true;
+  let isLoggedIn = false;
 
   return (
-    <StyledInfo>
+    <StyledInfoContainer>
       <Text font={titleFont}>{titleText}</Text>
-      <Text font={contentFont} color={contentColor} bold>
-        {isLoggedIn ? infoContent : '-'}
-      </Text>
-    </StyledInfo>
+      <Link href={isLoggedIn ? linkUrl : '/login'}>
+        <a>
+          <Text font={contentFont} color={contentColor} bold>
+            {isLoggedIn ? infoContent : '?'}
+          </Text>
+        </a>
+      </Link>
+    </StyledInfoContainer>
   );
 };
 

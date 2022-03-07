@@ -1,13 +1,25 @@
 import { ReactElement } from 'react';
-import { StyledContainer, StyledLogo, StyledButton } from './styles';
-import { Icon } from '@/base';
+import {
+  StyledWrapper,
+  StyledContainer,
+  StyledLogo,
+  StyledGoogleButton,
+  StyledButtonWrapper,
+  StyledLogoutButton
+} from './styles';
+import { Icon, Image } from '@/base';
 import { ICON_SIZE } from '@/constants';
 import Link from 'next/link';
 
 // temp urls
 const Header = (): ReactElement => {
   // from store
-  let isLoggedIn = true;
+  let isLoggedIn = false;
+
+  const handleLogIn = async () => {
+    let res = await fetch('https://sharetube-be.herokuapp.com/auth/login');
+    console.log(res);
+  };
 
   // onclick logout fn
   const logOut = () => {
@@ -16,32 +28,32 @@ const Header = (): ReactElement => {
   };
 
   return (
-    <StyledContainer>
-      <Link href={'#'}>
-        <a>
-          <Icon icon={'add'} size={ICON_SIZE.lg} />
-        </a>
-      </Link>
-      {/* // temp Logo Icon */}
-      <Link href={'#'}>
-        <a>
-          <StyledLogo>
-            <Icon icon={'star'} size={ICON_SIZE.lg} />
-          </StyledLogo>
-        </a>
-      </Link>
-      {isLoggedIn ? (
-        <StyledButton onClick={logOut} type={'button'}>
-          {'로그아웃'}
-        </StyledButton>
-      ) : (
-        <Link href={'/auth'}>
+    <StyledWrapper>
+      <StyledContainer>
+        <Link href={'#'}>
           <a>
-            <Icon icon={'share'} size={ICON_SIZE.lg} />
+            <Icon icon={'add'} size={ICON_SIZE.lg} />
           </a>
         </Link>
-      )}
-    </StyledContainer>
+        {/* // temp Logo Icon */}
+        <Link href={'#'}>
+          <a>
+            <StyledLogo>
+              <Icon icon={'star'} size={ICON_SIZE.lg} />
+            </StyledLogo>
+          </a>
+        </Link>
+        {isLoggedIn ? (
+          <StyledLogoutButton onClick={logOut} type={'button'}>
+            {'로그아웃'}
+          </StyledLogoutButton>
+        ) : (
+          <StyledButtonWrapper>
+            <StyledGoogleButton onClick={handleLogIn} />
+          </StyledButtonWrapper>
+        )}
+      </StyledContainer>
+    </StyledWrapper>
   );
 };
 

@@ -1,12 +1,18 @@
 import styled from 'styled-components';
 
+const StyledContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+`;
+
 // snap not working?
 // temp size
-const StyledContainer = styled.div`
+const StyledCardContainer = styled.div`
   display: flex;
   flex-direction: row;
   gap: 10px;
-  width: 700px;
+  width: 100%;
   overflow-x: scroll;
   scroll-snap-type: x mandatory;
   -ms-overflow-style: none;
@@ -25,4 +31,4 @@ const StyledMoreButton = styled.button`
   border: none;
 `;
 
-export { StyledContainer, StyledMoreButton };
+export { StyledContainer, StyledCardContainer, StyledMoreButton };

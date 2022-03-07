@@ -1,4 +1,5 @@
 const COLOR = {
+  white: '#FFFFFF',
   red: '#FF4A41',
   coral: '#F66160',
   black: '#2b2b2b',

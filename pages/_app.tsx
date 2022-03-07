@@ -1,6 +1,7 @@
 import '../styles/globals.css';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
+import { DefaultPageLayout } from '@/layout';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -8,7 +9,9 @@ function MyApp({ Component, pageProps }: AppProps) {
       <Head>
         <title>ShareTube | 쉐어튜브</title>
       </Head>
-      <Component {...pageProps} />
+      <DefaultPageLayout>
+        <Component {...pageProps} />
+      </DefaultPageLayout>
     </>
   );
 }

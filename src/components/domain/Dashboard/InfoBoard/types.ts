@@ -8,6 +8,7 @@ interface InfoBoardProps {
 
 interface InfoBoardItemProps {
   titleText: string;
+  linkUrl: string;
   infoContent: string | number;
   titleFont: IFont;
   contentFont: IFont;

@@ -17,6 +17,7 @@ const InfoBoard = ({
     <StyledContainer>
       <InfoBoardItem
         titleText={'구독 중인 채널'}
+        linkUrl={'/list/create'}
         infoContent={subscriptions}
         titleFont={titleFont}
         contentFont={contentFont}
@@ -24,6 +25,7 @@ const InfoBoard = ({
       />
       <InfoBoardItem
         titleText={'내가 공유한 리스트'}
+        linkUrl={'/list'}
         infoContent={sharedLists}
         titleFont={titleFont}
         contentFont={contentFont}
@@ -31,6 +33,7 @@ const InfoBoard = ({
       />
       <InfoBoardItem
         titleText={'내 리스트 총 조회수'}
+        linkUrl={'/list'}
         infoContent={totalViews}
         titleFont={titleFont}
         contentFont={contentFont}

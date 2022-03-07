@@ -8,6 +8,7 @@ const StyledButton = styled.button<ButtonProps>`
   padding: 0;
   background-color: ${({ color }): string => color};
   border: none;
+  border-radius: 10px;
   ${({ boxShadow }): false | undefined | FlattenSimpleInterpolation =>
     boxShadow &&
     css`

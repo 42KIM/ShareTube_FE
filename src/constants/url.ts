@@ -1,6 +1,8 @@
+const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL;
+
 const PAGE_URL = {
   main: '/',
   login: '/login'
 } as const;
 
-export { PAGE_URL };
+export { BASE_URL, PAGE_URL };

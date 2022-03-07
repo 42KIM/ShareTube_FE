@@ -1,6 +1,6 @@
-import { default as Container } from './Container';
-import { default as InfoBoard } from './InfoBoard';
-import { default as InfoText } from './InfoText';
-import { default as LinkText } from './LinkText';
+import Container from './Container';
+import InfoBoard from './InfoBoard';
+import InfoText from './InfoText';
+import LinkText from './LinkText';
 
 export default { Container, InfoBoard, InfoText, LinkText };

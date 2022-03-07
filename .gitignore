@@ -36,5 +36,5 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 
-# test
+# test page
 /pages/test/index.tsx

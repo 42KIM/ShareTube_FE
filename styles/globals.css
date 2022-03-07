@@ -196,8 +196,15 @@ table {
   box-sizing: border-box;
   letter-spacing: -0.05em;
 }
-button,
+button {
+  padding: 0;
+  cursor: pointer;
+  box-shadow: none;
+}
 a {
   text-decoration: none;
+  cursor: pointer;
+}
+svg {
   cursor: pointer;
 }

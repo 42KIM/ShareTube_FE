@@ -7,7 +7,8 @@ const Button = ({
   size,
   color,
   floatPosition,
-  boxShadow
+  boxShadow,
+  onClick
 }: ButtonProps): ReactElement => {
   return (
     <StyledButton
@@ -15,6 +16,7 @@ const Button = ({
       color={color}
       floatPosition={floatPosition}
       boxShadow={boxShadow}
+      onClick={onClick}
     >
       {children}
     </StyledButton>

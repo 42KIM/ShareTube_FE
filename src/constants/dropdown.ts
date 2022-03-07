@@ -1,7 +1,7 @@
 const DROPDOWN_SIZE = {
   sm: {
-    width: '100px',
-    height: '30px'
+    width: '125px',
+    height: '20px'
   },
   md: {
     width: '200px',

@@ -1,8 +1,8 @@
-import { ReactChild } from 'react';
+import { HTMLAttributes, ReactNode } from 'react';
 import { IButtonSize, IColor } from '@/types';
 
-interface ButtonProps {
-  children: ReactChild;
+interface ButtonProps extends HTMLAttributes<HTMLButtonElement> {
+  children: ReactNode;
   size: IButtonSize;
   color: IColor;
   floatPosition?: number;

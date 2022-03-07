@@ -1,8 +1,8 @@
 import { IColor, IFont } from '@/types';
-import { HTMLAttributes, ReactChild } from 'react';
+import { HTMLAttributes, ReactNode } from 'react';
 
 interface TextButtonProps extends HTMLAttributes<HTMLButtonElement> {
-  children: ReactChild;
+  children: ReactNode;
   font: IFont;
   textColor?: IColor;
   width?: number | string;

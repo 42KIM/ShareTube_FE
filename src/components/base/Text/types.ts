@@ -1,8 +1,8 @@
 import type { IColor, IFont } from '@/types';
-import { ReactChild } from 'react';
+import { ReactNode } from 'react';
 
 interface TextProps {
-  children?: ReactChild;
+  children: ReactNode;
   font: IFont;
   color?: IColor;
   bold?: boolean;

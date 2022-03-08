@@ -1,3 +1,4 @@
+export * from './axios';
 export * from './button';
 export * from './channelCard';
 export * from './color';

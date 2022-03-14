@@ -7,7 +7,7 @@ const CallbackPage = (): ReactElement => {
   const { id } = router.query;
 
   const handleLogin = async (id: string) => {
-    let data = await authApi.loginWithUserData(id);
+    const data = await authApi.getLoginData(id);
 
     // 데이터를 스토리지/스토어에 보관 후, 메인페이지로 리다이렉트
     console.log(data);

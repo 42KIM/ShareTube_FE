@@ -21,10 +21,12 @@ const setInstance = <T>(requestType: string) => {
     case REQUEST_TYPE.AUTH:
       instance.interceptors.request.use(
         (config) => {
+          // storage에서 token 가져오기
+          const token = '';
+
           config.headers = {
             'Content-Type': 'application/json',
-            // storage에서 token 가져오기
-            token: `${''}`,
+            Authorization: `Bearer ${token}`,
             ...config.headers
           };
           return config;

@@ -16,6 +16,7 @@
     "incremental": true,
     "baseUrl": ".",
     "paths": {
+      "@/apis": ["src/apis"],
       "@/base": ["src/components/base"],
       "@/domain": ["src/components/domain"],
       "@/layout": ["src/components/layout"],

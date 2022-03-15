@@ -1,5 +1,5 @@
 import type { NextPage } from 'next';
-import { Header, GreetingBox, Dashboard, Carousel } from '@/domain';
+import { GreetingBox, Dashboard, Carousel } from '@/domain';
 import { COLOR, FONT } from '@/constants';
 
 const Home: NextPage = () => {

@@ -18,7 +18,9 @@
     "paths": {
       "@/apis": ["src/apis"],
       "@/base": ["src/components/base"],
+      "@/base/*": ["src/components/base/*"],
       "@/domain": ["src/components/domain"],
+      "@/domain/*": ["src/components/domain/*"],
       "@/layout": ["src/components/layout"],
       "@/constants": ["src/constants"],
       "@/types": ["src/types"],

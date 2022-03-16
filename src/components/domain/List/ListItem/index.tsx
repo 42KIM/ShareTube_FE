@@ -7,12 +7,17 @@ import {
   StyledViewWrapper,
   StyledIconBox
 } from './styles';
-import type { ItemProps } from './types';
+import type { ListItemProps } from './types';
 import { Image, Icon, Text } from '@/base';
 import { COLOR, FONT, ICON_SIZE } from '@/constants';
 import Link from 'next/link';
 
-const Item = ({ id, thumbnail, title, views }: ItemProps): ReactElement => {
+const ListItem = ({
+  id,
+  thumbnail,
+  title,
+  views
+}: ListItemProps): ReactElement => {
   return (
     <StyledContainer>
       <StyledCheckbox type={'checkbox'} value={id} />
@@ -39,4 +44,4 @@ const Item = ({ id, thumbnail, title, views }: ItemProps): ReactElement => {
   );
 };
 
-export default Item;
+export default ListItem;

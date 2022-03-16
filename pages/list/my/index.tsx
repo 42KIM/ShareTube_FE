@@ -77,7 +77,7 @@ const MylistPage = (): ReactElement => {
         <List.CreateButton />
         {Children.toArray(
           tab.listItems.map(({ id, thumbnail, title, views }) => (
-            <List.Item
+            <List.ListItem
               id={id}
               thumbnail={thumbnail}
               title={title}

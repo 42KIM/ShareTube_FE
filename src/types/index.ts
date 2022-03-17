@@ -1,4 +1,6 @@
+export * from './auth';
 export * from './button';
+export * from './channel';
 export * from './channelCard';
 export * from './color';
 export * from './dropdown';

@@ -22,7 +22,9 @@
       "@/layout": ["src/components/layout"],
       "@/constants": ["src/constants"],
       "@/types": ["src/types"],
-      "@/utils": ["src/utils"]
+      "@/utils": ["src/utils"],
+      "@/store": ["src/store"],
+      "@/store/*": ["src/store/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],

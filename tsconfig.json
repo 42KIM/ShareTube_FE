@@ -17,12 +17,21 @@
     "baseUrl": ".",
     "paths": {
       "@/apis": ["src/apis"],
+      "@/apis/*": ["src/apis/*"],
       "@/base": ["src/components/base"],
+      "@/base/*": ["src/components/base/*"],
       "@/domain": ["src/components/domain"],
+      "@/domain/*": ["src/components/domain/*"],
       "@/layout": ["src/components/layout"],
+      "@/layout/*": ["src/components/layout/*"],
       "@/constants": ["src/constants"],
+      "@/constants/*": ["src/constants/*"],
+      "@/hooks": ["src/hooks"],
+      "@/hooks/*": ["src/hooks/*"],
       "@/types": ["src/types"],
+      "@/types/*": ["src/types/*"],
       "@/utils": ["src/utils"],
+      "@/utils/*": ["src/utils/*"],
       "@/store": ["src/store"],
       "@/store/*": ["src/store/*"]
     }

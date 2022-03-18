@@ -1,8 +1,10 @@
 import { request, authRequest } from '../axios';
+import { ILogInPayload } from '@/types';
 
 const authApi = {
-  // response data 타입 정의 필요
-  getLoginData: (id: string) => request.get(`/auth/result/${id}`)
+  getInitialData: (id: string): Promise<ILogInPayload> =>
+    request.get(`/auth/result/${id}`),
+  logout: (): Promise<string> => authRequest.get('/auth/logout')
 };
 
 export default authApi;

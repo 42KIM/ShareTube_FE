@@ -1,16 +1,25 @@
 import { useRouter } from 'next/router';
 import { ReactElement, useEffect } from 'react';
 import { authApi } from '@/apis';
+import { logIn } from '@/store';
+import { useDispatch } from 'react-redux';
+import { useLocalStorage } from '@/hooks';
 
 const CallbackPage = (): ReactElement => {
   const router = useRouter();
   const { id } = router.query;
+  const dispatch = useDispatch();
+  const [, setValue] = useLocalStorage('TOKEN', '');
 
   const handleLogin = async (id: string) => {
-    const data = await authApi.getLoginData(id);
+    const data = await authApi.getInitialData(id);
 
-    // 데이터를 스토리지/스토어에 보관 후, 메인페이지로 리다이렉트
-    console.log(data);
+    // isLoggedIn 검증 후 처리해서 payload에 추가해서 dispatch 시키기
+    // or 디스패치 후 _App에서 accessToken 존재 여부를 확인해서 isLoggedIn 업데이트.
+    // 단 이때는 단순히 존재가 아니라 유효성도 검증해야한다.
+
+    dispatch(logIn(data));
+    setValue(data.accessToken);
     router.replace('/');
   };
 

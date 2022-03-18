@@ -10,28 +10,33 @@ import {
 import { Icon } from '@/base';
 import { BASE_URL, ICON_SIZE } from '@/constants';
 import Link from 'next/link';
+import { authApi } from '@/apis';
+import { useDispatch } from 'react-redux';
+import { logOut } from '@/store';
+import { useAppSelector } from '@/hooks';
+import { useLocalStorage } from '@/hooks';
 
-// temp urls
 const Header = (): ReactElement => {
-  // from store
-  let isLoggedIn = false;
+  const isLoggedIn = useAppSelector((state) => state.auth.isLoggedIn);
+  const dispatch = useDispatch();
+  const [, , clearValue] = useLocalStorage('TOKEN', '');
 
-  // onclick logout fn
-  const logOut = () => {
-    console.log('log out!');
-    // logout dispatch -> refresh page?
+  const handlelogOut = async () => {
+    await authApi.logout();
+    dispatch(logOut());
+    clearValue();
   };
 
   return (
     <StyledWrapper>
       <StyledContainer>
-        <Link href={'#'}>
+        <Link href={'/'}>
           <a>
             <Icon icon={'add'} size={ICON_SIZE.lg} />
           </a>
         </Link>
         {/* // temp Logo Icon */}
-        <Link href={'#'}>
+        <Link href={'/'}>
           <a>
             <StyledLogo>
               <Icon icon={'star'} size={ICON_SIZE.lg} />
@@ -39,7 +44,7 @@ const Header = (): ReactElement => {
           </a>
         </Link>
         {isLoggedIn ? (
-          <StyledLogoutButton onClick={logOut} type={'button'}>
+          <StyledLogoutButton onClick={handlelogOut} type={'button'}>
             {'로그아웃'}
           </StyledLogoutButton>
         ) : (

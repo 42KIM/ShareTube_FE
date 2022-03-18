@@ -2,7 +2,8 @@ import Tab from './Tab';
 import InfoBox from './InfoBox';
 import InnerContainer from './InnerContainer';
 import CreateButton from './CreateButton';
-import Item from './Item';
+import ListItem from './ListItem';
+import ChannelItem from './Channeltem';
 import FloatButton from './FloatButton';
 
 export default {
@@ -10,6 +11,7 @@ export default {
   InfoBox,
   InnerContainer,
   CreateButton,
-  Item,
+  ListItem,
+  ChannelItem,
   FloatButton
 };

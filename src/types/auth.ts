@@ -9,6 +9,7 @@ interface IUser {
 }
 
 interface ILogInPayload {
+  isLoggedIn: boolean;
   accessToken: string;
   user: IUser;
   youtubeSubs: ISubsSummary;

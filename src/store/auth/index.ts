@@ -3,6 +3,7 @@ import { HYDRATE } from 'next-redux-wrapper';
 import type { ILogInPayload, IChannel } from '@/types';
 
 const initialState = {
+  isLoggedIn: false,
   accessToken: '',
   user: {
     email: '',
@@ -27,14 +28,16 @@ const slice = createSlice({
       const { accessToken, user, youtubeSubs } = action.payload;
       return {
         ...state,
+        isLoggedIn: true,
         accessToken,
         user,
         youtubeSubs
       };
-    }
+    },
+    logOut: () => initialState
   }
 });
 
 export const authReducer = slice.reducer;
 
-export const { logIn } = slice.actions;
+export const { logIn, logOut } = slice.actions;

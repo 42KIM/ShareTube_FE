@@ -4,11 +4,12 @@ import {
   StyledCheckbox,
   StyledImageWrapper,
   StyledInfoContainer,
-  StyledTextWrapper
+  StyledTextWrapper,
+  StyledIconWrapper
 } from './styles';
 import type { ChannelItemProps } from './types';
-import { Image, Text } from '@/base';
-import { COLOR, FONT } from '@/constants';
+import { Icon, Image, Text } from '@/base';
+import { COLOR, FONT, ICON_SIZE } from '@/constants';
 import { openInNewTab } from '@/utils';
 
 const ChannelItem = ({
@@ -24,7 +25,7 @@ const ChannelItem = ({
       <StyledImageWrapper>
         <Image src={thumbnail} width={70} height={70} borderRadius={10} />
       </StyledImageWrapper>
-      <StyledInfoContainer onClick={() => openInNewTab(url)}>
+      <StyledInfoContainer>
         <StyledTextWrapper>
           <Text font={FONT.title}>{title}</Text>
         </StyledTextWrapper>
@@ -32,6 +33,9 @@ const ChannelItem = ({
           {subscribers ? `${subscribers}명` : '비공개'}
         </Text>
       </StyledInfoContainer>
+      <StyledIconWrapper onClick={() => openInNewTab(url)}>
+        <Icon icon={'youtube'} size={ICON_SIZE.lg} color={COLOR.red} />
+      </StyledIconWrapper>
     </StyledContainer>
   );
 };

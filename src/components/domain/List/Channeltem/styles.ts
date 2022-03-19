@@ -20,10 +20,17 @@ const StyledTextWrapper = styled.div`
   white-space: nowrap;
 `;
 
+const StyledIconWrapper = styled.div`
+  position: absolute;
+  right: 2%;
+  display: flex;
+`;
+
 export {
   StyledContainer,
   StyledCheckbox,
   StyledImageWrapper,
   StyledInfoContainer,
-  StyledTextWrapper
+  StyledTextWrapper,
+  StyledIconWrapper
 };

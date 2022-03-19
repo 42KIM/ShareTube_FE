@@ -82,8 +82,9 @@ const Carousel = (): ReactElement => {
             />
           ))
         )}
-        <Link href={'/list'}>
+        <Link href={'/list/subscriptions'}>
           <a>
+            {/* 더보기 UI */}
             <ChannelCard size={'150px'} />
           </a>
         </Link>

@@ -6,4 +6,5 @@ export * from './color';
 export * from './dropdown';
 export * from './icon';
 export * from './font';
+export * from './list';
 export * from './url';

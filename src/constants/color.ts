@@ -1,6 +1,7 @@
 const COLOR = {
   white: '#FFFFFF',
   red: '#FF4A41',
+  youtubeRed: 'FF0000',
   coral: '#F66160',
   black: '#2b2b2b',
   whiteGray: '#f8f8f8',

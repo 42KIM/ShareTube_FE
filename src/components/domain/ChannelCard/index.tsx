@@ -13,7 +13,7 @@ const ChannelCard = ({
   url,
   direction,
   size,
-  thumbnail,
+  thumbnail = 'https://via.placeholder.com/200?text=See+More',
   title,
   subTitle
 }: ChannelCardProps): ReactElement => {

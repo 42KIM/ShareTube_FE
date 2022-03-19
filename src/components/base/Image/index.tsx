@@ -4,7 +4,7 @@ import type { ImageProps } from './types';
 import NextImage from 'next/image';
 
 const Image = ({
-  src = 'https://via.placeholder.com/200?text=No+Image',
+  src,
   width,
   height,
   borderRadius

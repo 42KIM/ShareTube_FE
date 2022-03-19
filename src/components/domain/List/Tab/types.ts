@@ -1,10 +1,10 @@
 interface ITabState {
-  firstTabSelected: boolean;
+  isFirstTabSelected: boolean;
   listItems: any[];
 }
 
 interface TabProps {
-  tabState: ITabState;
+  isFirstTabSelected: boolean;
   tabHandler: () => void;
 }
 

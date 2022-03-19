@@ -1,10 +1,5 @@
-interface ITabState {
-  firstTabSelected: boolean;
-  listItems: any[];
-}
-
 interface InfoBoxProps {
-  tabState: ITabState;
+  path: string;
   listInfo: number | string;
 }
 

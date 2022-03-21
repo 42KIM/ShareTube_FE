@@ -3,6 +3,7 @@ import { StyledInfoContainer } from './styles';
 import type { InfoBoardItemProps } from './types';
 import { Text } from '@/base';
 import Link from 'next/link';
+import { useAppSelector } from '@/hooks';
 
 const InfoBoardItem = ({
   titleText,
@@ -13,7 +14,8 @@ const InfoBoardItem = ({
   contentColor
 }: InfoBoardItemProps): ReactElement => {
   // from store
-  let isLoggedIn = false;
+  // let isLoggedIn = false;
+  const { isLoggedIn } = useAppSelector((state) => state.auth);
 
   return (
     <StyledInfoContainer>

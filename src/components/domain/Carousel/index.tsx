@@ -4,6 +4,7 @@ import { Text } from '@/base';
 import { ChannelCard } from '@/domain';
 import Link from 'next/link';
 import { FONT } from '@/constants';
+import { useAppSelector } from '@/hooks';
 
 // DUMMY
 const channel = {
@@ -15,8 +16,7 @@ const channel = {
 };
 
 const Carousel = (): ReactElement => {
-  // from store.
-  let isLoggedIn = false;
+  const { isLoggedIn } = useAppSelector((state) => state.auth);
   let username = 'User';
   // top 10 channels
   // IChannel 타입 필요
@@ -56,7 +56,7 @@ const Carousel = (): ReactElement => {
   return (
     <StyledContainer>
       {isLoggedIn ? (
-        <Link href={'/list'}>
+        <Link href={isLoggedIn ? '/list/subscriptions' : '/login'}>
           <a>
             <Text
               font={FONT.h3_bolder}

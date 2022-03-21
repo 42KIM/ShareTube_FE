@@ -1,8 +1,10 @@
 import type { NextPage } from 'next';
 import { GreetingBox, Dashboard, Carousel } from '@/domain';
 import { COLOR, FONT } from '@/constants';
+import { useAppSelector } from '@/hooks';
 
 const Home: NextPage = () => {
+  const { isLoggedIn } = useAppSelector((state) => state.auth);
   return (
     <>
       <GreetingBox
@@ -20,11 +22,13 @@ const Home: NextPage = () => {
           contentFont={FONT.info_giant}
         />
         <Dashboard.LinkText
-          url={'/login'}
+          url={isLoggedIn ? '/list/my' : '/login'}
           textFont={FONT.h4_bold}
           textColor={COLOR.white}
         >
-          로그인하여 내 랭킹 확인하기
+          {isLoggedIn
+            ? '마이 리스트 보러 가기 >'
+            : '로그인하여 내 랭킹 확인하기'}
         </Dashboard.LinkText>
       </Dashboard.Container>
       <Carousel />

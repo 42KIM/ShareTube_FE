@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { BASE_URL, REQUEST_TYPE } from '@/constants';
-import { getLocalStorageToken } from '@/utils';
+import { getLocalStorageItem } from '@/utils';
 
 const setInstance = <T>(requestType: string) => {
   const instance = axios.create({ baseURL: BASE_URL });
@@ -23,7 +23,7 @@ const setInstance = <T>(requestType: string) => {
       instance.interceptors.request.use(
         (config) => {
           // storage에서 token 가져오기
-          const token = getLocalStorageToken('TOKEN');
+          const { token } = getLocalStorageItem('USER');
           if (!token) {
             console.error('Invalid LocalStorage Token!');
             return;

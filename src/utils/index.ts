@@ -1,2 +1,2 @@
-export * from './getLocalStorageToken';
+export * from './getLocalStorageItem';
 export * from './openInNewTab';

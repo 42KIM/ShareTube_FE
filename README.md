@@ -11,3 +11,8 @@ ShareTube를 통해 당신의 콘텐츠 취향을 공유하고,
 - 100만 유튜버도 내게는 노잼이지만, 나랑 취향이 찰떡 같이 일치하는 친구가 보는 콘텐츠라면 왠지 믿고 볼 수 있을 것 같다. 당신의 구독 목록이 궁금해.
 - 상대방의 취향에 따라, 기분에 따라 가장 어울리는 채널을 선별하여 선물해주고 싶다면?
 - 이제는 유튜브 구독 목록을 통해 ‘나’를 드러내자!
+
+### Page Examples
+| 메인페이지 | 생성페이지 | 공유페이지 |
+| :---: | :---: | :---: |
+| ![메인](https://user-images.githubusercontent.com/75300807/160138982-504bee71-3177-49a9-9f58-3b35ddcf4651.PNG) | ![생성](https://user-images.githubusercontent.com/75300807/160139039-4cdc2187-6a4e-45be-a461-4507baed010f.PNG) | ![공유](https://user-images.githubusercontent.com/75300807/160139070-68d3cd6d-ac67-4a8b-a630-dc2890f11aae.PNG)

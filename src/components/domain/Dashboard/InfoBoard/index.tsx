@@ -32,7 +32,7 @@ const InfoBoard = ({
         contentColor={contentColor}
       />
       <InfoBoardItem
-        titleText={'내 리스트 총 조회수'}
+        titleText={'공유 받은 리스트'}
         linkUrl={'/list/my'}
         infoContent={totalViews}
         titleFont={titleFont}

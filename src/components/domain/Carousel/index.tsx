@@ -6,32 +6,10 @@ import Link from 'next/link';
 import { FONT } from '@/constants';
 import { useAppSelector } from '@/hooks';
 
-// DUMMY
-const channel = {
-  url: 'http://www.youtube.com',
-  thumbnail:
-    'https://yt3.ggpht.com/ytc/AKedOLTi6w4E6985-QdVBbovBSsnCeTETyj0WomjM5IY8Q=s900-c-k-c0x00ffffff-no-rj',
-  title: '킹받네KG받드라슈어쩔티비저쩔티비',
-  subTitle: '11.1'
-};
-
 const Carousel = (): ReactElement => {
-  const { isLoggedIn } = useAppSelector((state) => state.auth);
-  let username = 'User';
-  // top 10 channels
-  // IChannel 타입 필요
-  let topChannels = [
-    channel,
-    channel,
-    channel,
-    channel,
-    channel,
-    channel,
-    channel,
-    channel,
-    channel,
-    channel
-  ];
+  const { isLoggedIn, user, youtubeSubs } = useAppSelector(
+    (state) => state.auth
+  );
 
   const wheelRef = useRef<HTMLDivElement>(null);
 
@@ -60,7 +38,7 @@ const Carousel = (): ReactElement => {
           <a>
             <Text
               font={FONT.h3_bolder}
-            >{`${username}님이 구독 중인 채널 >`}</Text>
+            >{`${user.nickname}님이 구독 중인 채널 >`}</Text>
           </a>
         </Link>
       ) : (
@@ -72,13 +50,13 @@ const Carousel = (): ReactElement => {
       )}
       <StyledCardContainer ref={wheelRef}>
         {Children.toArray(
-          topChannels.map((channel) => (
+          youtubeSubs.topChannels.map((channel) => (
             <ChannelCard
-              url={channel.url}
+              url={channel.channelUrl}
               size={'150px'}
-              thumbnail={channel.thumbnail}
+              thumbnail={channel.thumbnail.default.url}
               title={channel.title}
-              subTitle={channel.subTitle}
+              subTitle={channel.subscribers}
             />
           ))
         )}

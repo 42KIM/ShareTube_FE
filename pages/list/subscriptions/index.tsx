@@ -7,7 +7,7 @@ import { listApi } from '@/apis';
 
 const SubscriptionsPage = (): ReactElement => {
   const [drawerOn, setDrawerOn] = useState(false);
-  const [selectedChannels, setSelectedChannels] = useState([]);
+  // const [selectedChannels, setSelectedChannels] = useState([]);
   const { totalSubscriptions, channelDetails } = useAppSelector(
     (state) => state.subscription
   );

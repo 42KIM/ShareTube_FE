@@ -6,7 +6,7 @@ interface ChannelCardProps {
   size: ICard;
   thumbnail?: string;
   title?: string;
-  subTitle?: string;
+  subTitle?: string | number;
 }
 
 export type { ChannelCardProps };

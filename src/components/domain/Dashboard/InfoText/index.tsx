@@ -19,9 +19,9 @@ const InfoText = ({
           <Text font={textFont} bold>
             {user.nickname}
           </Text>
-          <Text font={textFont}>{'님은 구독 채널 수'}</Text>
+          <Text font={textFont}>{'님의 구독 채널 수는 이용자 상위'}&nbsp;</Text>
           <Text font={textFont} color={highlightColor} bold>
-            {percentile + '%'}
+            {`${percentile}%`}
           </Text>
           <Text font={textFont}>{'입니다! 🤭'}</Text>
         </>

@@ -13,8 +13,6 @@ const InfoBoardItem = ({
   contentFont,
   contentColor
 }: InfoBoardItemProps): ReactElement => {
-  // from store
-  // let isLoggedIn = false;
   const { isLoggedIn } = useAppSelector((state) => state.auth);
 
   return (

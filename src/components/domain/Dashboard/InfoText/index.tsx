@@ -2,24 +2,24 @@ import { ReactElement } from 'react';
 import { Text } from '@/base';
 import { StyledContainer } from './styles';
 import type { InfoTextProps } from './types';
+import { useAppSelector } from '@/hooks';
 
 const InfoText = ({
   textFont,
   highlightColor
 }: InfoTextProps): ReactElement => {
-  // from store
-  let isLoggedIn = false;
-  let name = 'User';
+  // percent
   let percentile = '0.0';
+  const { isLoggedIn, user } = useAppSelector((state) => state.auth);
 
   return (
     <StyledContainer>
       {isLoggedIn ? (
         <>
           <Text font={textFont} bold>
-            {name}
+            {user.nickname}
           </Text>
-          <Text font={textFont}>{'님은 구독 채널 수 '}</Text>
+          <Text font={textFont}>{'님은 구독 채널 수'}</Text>
           <Text font={textFont} color={highlightColor} bold>
             {percentile + '%'}
           </Text>

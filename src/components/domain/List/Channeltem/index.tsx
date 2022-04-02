@@ -30,7 +30,7 @@ const ChannelItem = ({
           <Text font={FONT.title}>{title}</Text>
         </StyledTextWrapper>
         <Text font={FONT.subTitle} color={COLOR.darkGray}>
-          {subscribers ? `${subscribers}명` : '비공개'}
+          {subscribers ? `${subscribers} 명` : '비공개'}
         </Text>
       </StyledInfoContainer>
       <StyledIconWrapper onClick={() => openInNewTab(url)}>

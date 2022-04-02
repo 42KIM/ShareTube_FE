@@ -5,6 +5,7 @@ import { ChannelCard } from '@/domain';
 import Link from 'next/link';
 import { FONT } from '@/constants';
 import { useAppSelector } from '@/hooks';
+import { format } from '@/utils';
 
 const Carousel = (): ReactElement => {
   const { isLoggedIn, user, youtubeSubs } = useAppSelector(
@@ -50,15 +51,17 @@ const Carousel = (): ReactElement => {
       )}
       <StyledCardContainer ref={wheelRef}>
         {Children.toArray(
-          youtubeSubs.topChannels.map((channel) => (
-            <ChannelCard
-              url={channel.channelUrl}
-              size={'150px'}
-              thumbnail={channel.thumbnail.default.url}
-              title={channel.title}
-              subTitle={channel.subscribers}
-            />
-          ))
+          youtubeSubs.topChannels.map(
+            ({ channelUrl, thumbnail, title, subscribers }) => (
+              <ChannelCard
+                url={channelUrl}
+                size={'150px'}
+                thumbnail={thumbnail.default.url}
+                title={title}
+                subTitle={subscribers ? format(subscribers) : 0}
+              />
+            )
+          )
         )}
         <Link href={'/list/subscriptions'}>
           <a>

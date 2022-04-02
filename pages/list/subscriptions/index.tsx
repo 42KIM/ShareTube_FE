@@ -3,6 +3,7 @@ import { List } from '@/domain';
 import { useAppSelector } from '@/hooks';
 import { useDispatch } from 'react-redux';
 import { getSubscriptions } from '@/store';
+import { format } from '@/utils';
 import { listApi } from '@/apis';
 
 const SubscriptionsPage = (): ReactElement => {
@@ -50,7 +51,7 @@ const SubscriptionsPage = (): ReactElement => {
                 id={id}
                 thumbnail={thumbnail.default.url}
                 title={title}
-                subscribers={subscribers}
+                subscribers={subscribers ? format(subscribers) : 0}
                 url={channelUrl}
               />
             )

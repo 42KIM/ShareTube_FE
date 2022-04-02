@@ -29,7 +29,7 @@ const ChannelCard = ({
           <Text font={FONT.title}>{title}</Text>
         </StyledTextWrapper>
         <Text font={FONT.subTitle}>
-          {subTitle !== undefined ? `${subTitle}명` : ''}
+          {subTitle !== undefined ? `${subTitle} 명` : '비공개'}
         </Text>
       </StyledTextContainer>
     </StyledContainer>

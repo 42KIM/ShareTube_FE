@@ -6,7 +6,7 @@ import { ChangeEvent, ReactElement } from 'react';
 
 const SearchInput = ({ onChange }: SearchInputProps): ReactElement => {
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
-    console.log(e.target.value);
+    onChange(e.target.value);
   };
 
   return (

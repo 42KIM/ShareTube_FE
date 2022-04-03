@@ -1,5 +1,5 @@
 interface SearchInputProps {
-  onChange: () => void;
+  onChange: (keyword: string) => void;
 }
 
 export type { SearchInputProps };

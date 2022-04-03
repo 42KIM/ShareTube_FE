@@ -30,4 +30,8 @@ interface ISubsSummary {
   totalSubscriptions: number;
 }
 
-export type { IChannelThumbnail, IChannel, ISubsSummary };
+interface ISubsFull {
+  totalSubscriptions: number;
+  channelDetails: IChannel[];
+}
+export type { IChannelThumbnail, IChannel, ISubsSummary, ISubsFull };

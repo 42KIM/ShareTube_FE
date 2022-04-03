@@ -4,34 +4,13 @@ import { Text } from '@/base';
 import { ChannelCard } from '@/domain';
 import Link from 'next/link';
 import { FONT } from '@/constants';
-
-// DUMMY
-const channel = {
-  url: 'http://www.youtube.com',
-  thumbnail:
-    'https://yt3.ggpht.com/ytc/AKedOLTi6w4E6985-QdVBbovBSsnCeTETyj0WomjM5IY8Q=s900-c-k-c0x00ffffff-no-rj',
-  title: '킹받네KG받드라슈어쩔티비저쩔티비',
-  subTitle: '11.1'
-};
+import { useAppSelector } from '@/hooks';
+import { format } from '@/utils';
 
 const Carousel = (): ReactElement => {
-  // from store.
-  let isLoggedIn = false;
-  let username = 'User';
-  // top 10 channels
-  // IChannel 타입 필요
-  let topChannels = [
-    channel,
-    channel,
-    channel,
-    channel,
-    channel,
-    channel,
-    channel,
-    channel,
-    channel,
-    channel
-  ];
+  const { isLoggedIn, user, youtubeSubs } = useAppSelector(
+    (state) => state.auth
+  );
 
   const wheelRef = useRef<HTMLDivElement>(null);
 
@@ -56,11 +35,11 @@ const Carousel = (): ReactElement => {
   return (
     <StyledContainer>
       {isLoggedIn ? (
-        <Link href={'/list'}>
+        <Link href={isLoggedIn ? '/list/subscriptions' : '/login'}>
           <a>
             <Text
               font={FONT.h3_bolder}
-            >{`${username}님이 구독 중인 채널 >`}</Text>
+            >{`${user.nickname}님이 구독 중인 채널 >`}</Text>
           </a>
         </Link>
       ) : (
@@ -72,18 +51,21 @@ const Carousel = (): ReactElement => {
       )}
       <StyledCardContainer ref={wheelRef}>
         {Children.toArray(
-          topChannels.map((channel) => (
-            <ChannelCard
-              url={channel.url}
-              size={'150px'}
-              thumbnail={channel.thumbnail}
-              title={channel.title}
-              subTitle={channel.subTitle}
-            />
-          ))
+          youtubeSubs.topChannels.map(
+            ({ channelUrl, thumbnail, title, subscribers }) => (
+              <ChannelCard
+                url={channelUrl}
+                size={'150px'}
+                thumbnail={thumbnail.default.url}
+                title={title}
+                subTitle={subscribers ? format(subscribers) : 0}
+              />
+            )
+          )
         )}
-        <Link href={'/list'}>
+        <Link href={'/list/subscriptions'}>
           <a>
+            {/* 더보기 UI */}
             <ChannelCard size={'150px'} />
           </a>
         </Link>

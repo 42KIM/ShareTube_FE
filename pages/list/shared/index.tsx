@@ -2,33 +2,33 @@ import { ReactElement, useEffect, Children } from 'react';
 import { List } from '@/domain';
 import { useAppSelector } from '@/hooks';
 import { useDispatch } from 'react-redux';
-import { getMyLists } from '@/store';
+import { getSharedLists } from '@/store';
 import { listApi } from '@/apis';
 
 const MylistPage = (): ReactElement => {
-  const { totalCreatedListCount, createdList } = useAppSelector(
-    (state) => state.list.my
+  const { totalSharedListCount, sharedLists } = useAppSelector(
+    (state) => state.list.shared
   );
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(getMyLists());
+    dispatch(getSharedLists());
   }, []);
 
   const handleDelete = () => {
-    console.log('mylist delete!');
-    listApi.deleteMyList();
+    console.log('sharedList delete!');
+    listApi.deleteSharedList();
     // alert창
   };
 
   return (
     <>
       <List.Tab />
-      <List.InfoBox path={'/list/my'} listInfo={totalCreatedListCount} />
+      <List.InfoBox path={'/list/shared'} listInfo={totalSharedListCount} />
       <List.InnerContainer>
         <List.CreateButton />
         {Children.toArray(
-          createdList.map(({ id, thumbnail, title, views }) => (
+          sharedLists.map(({ id, thumbnail, title, views }) => (
             <List.ListItem
               id={id}
               thumbnail={thumbnail}

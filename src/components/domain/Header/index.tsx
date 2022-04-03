@@ -19,7 +19,7 @@ import { useLocalStorage } from '@/hooks';
 const Header = (): ReactElement => {
   const isLoggedIn = useAppSelector((state) => state.auth.isLoggedIn);
   const dispatch = useDispatch();
-  const [, , clearValue] = useLocalStorage('TOKEN', '');
+  const [, , clearValue] = useLocalStorage('USER', '');
 
   const handlelogOut = async () => {
     await authApi.logout();

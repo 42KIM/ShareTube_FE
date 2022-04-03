@@ -9,7 +9,7 @@ const CallbackPage = (): ReactElement => {
   const router = useRouter();
   const { id } = router.query;
   const dispatch = useDispatch();
-  const [, setValue] = useLocalStorage('TOKEN', '');
+  const [, setValue] = useLocalStorage('USER', {});
 
   const handleLogin = async (id: string) => {
     const data = await authApi.getInitialData(id);
@@ -19,7 +19,7 @@ const CallbackPage = (): ReactElement => {
     // 단 이때는 단순히 존재가 아니라 유효성도 검증해야한다.
 
     dispatch(logIn(data));
-    setValue(data.accessToken);
+    setValue({ token: data.accessToken, id: data.user.id });
     router.replace('/');
   };
 
